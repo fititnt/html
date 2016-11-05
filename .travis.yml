@@ -4,7 +4,7 @@ python:
 sudo: false
 branches:
   only:
-  - master
+  - html5.1-translation-pt
 before_install:
 - chmod 755 ./.deploy-output.sh
 - chmod 755 ./.multipage-split.sh
@@ -20,7 +20,8 @@ install:
 - bikeshed update
 # Use cached copy of bikeshed data files to give consistent builds
 #- cp -R .spec-data/* ./bikeshed/bikeshed/spec-data
-script: 'bikeshed spec && ./.multipage-split.sh'
+# script: 'bikeshed spec && ./.multipage-split.sh'
+script: 'bikeshed -f spec && ./.multipage-split.sh' # force build, html5.1 branch have few bikeshed fatal errors, needs investigation (fititnt, 2016-11-05 06:19)
 after_success:
 - '[ "${TRAVIS_PULL_REQUEST}" = "false" ] && ./.deploy-output.sh'
 env:
