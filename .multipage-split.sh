@@ -3,7 +3,7 @@ set -ev
 rm -rf out
 mkdir out
 
-git clone --depth=1 --branch=master https://github.com/adrianba/multipage.git ./tools
+git clone --depth=1 --branch=master https://github.com/fititnt/multipage.git ./tools
 pushd ./tools
 npm install
 popd
