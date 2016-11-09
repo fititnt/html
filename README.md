@@ -1,6 +1,6 @@
 # HTML
 
-(HTML 5.1 translation testing)
+(HTML 5.1 translation testing) 
 
 [![Build Status](https://travis-ci.org/w3c/html.svg?branch=master)](https://travis-ci.org/w3c/html)
 
